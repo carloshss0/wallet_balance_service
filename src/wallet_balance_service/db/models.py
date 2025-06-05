@@ -4,7 +4,7 @@ from .db import Base
 class Balance(Base):
     __tablename__ = "balances"
 
-    account_id = Column(String, primary_key=True, index=True)
+    account_id = Column(String(255), primary_key=True, index=True)
     balance = Column(Float, default=0.0)
 
 
