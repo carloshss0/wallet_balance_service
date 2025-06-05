@@ -1,11 +1,11 @@
-import asyncio
 import json
 from aiokafka import AIOKafkaConsumer
+import os
 
 from wallet_balance_service.db.models import Balance
 from .db.db import SessionLocal
 
-KAFKA_BOOTSTRAP_SERVERS = "localhost:9092"
+KAFKA_BOOTSTRAP_SERVERS = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "kafka:29092")
 TOPIC_NAME = "balances"
 
 async def consume():
