@@ -1,0 +1,13 @@
+GET http://localhost:8000/balances/2473ec29-ca0e-46ef-8f1e-416e7d66844c HTTP/1.1
+Content-Type: application/json
+
+####
+
+GET http://localhost:8000/balances/a02f8afc-8446-4ca9-9dbe-829c10b8a23d HTTP/1.1
+Content-Type: application/json
+
+
+#### Account does not exist
+
+GET http://localhost:8000/balances/test HTTP/1.1
+Content-Type: application/json
